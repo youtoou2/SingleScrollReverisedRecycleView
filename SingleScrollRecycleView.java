@@ -1,5 +1,3 @@
-package com.cwb.glance.view;
-
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -7,9 +5,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
-
-import com.cwb.glance.util.AppLog;
-
 /**
  * Created by youtoolaw on 6/1/16.
  */
@@ -124,7 +119,6 @@ public class SingleScrollRecycleView extends RecyclerView {
                     if (Math.abs(aMotionEvent.getX() - mStartX) > mMinDistanceMovedX) {
                         mVelocitx.computeCurrentVelocity(1000);
                         float velocity = mVelocitx.getXVelocity();
-                        AppLog.d("velocity X = "+velocity);
 
                         if (aMotionEvent.getX() > mStartX) {
                             // always lock
